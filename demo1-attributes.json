@@ -1,0 +1,29 @@
+{
+    "partition": {
+        "name": "demo1",
+        "primary-identity-domain": "idd_demo1",
+        "default-target": [{"virtual-target": {"name": "VT-demo-1"}}],
+        "available-target": [{"virtual-target": {"name": "VT-demo-1"}}]
+    },
+    "resource-group": {
+        "name": "demoRG",
+        "app-deployment": {
+            "name": "HelloWorld",
+            "module-type": "war",
+            "source-path": "\/home\/oracle\/demo\/TIAA-CREF\/HelloWorld.war",
+            "plan-dir": "sysman\/upload\/deploy\/HelloWorld_p_demo1\/config",
+            "plan-path": "plan.xml",
+            "security-dd-model": "DDOnly",
+            "staging-mode": {
+                "@xmlns:xsi": "http:\/\/www.w3.org\/2001\/XMLSchema-instance",
+                "@xsi:nil": "true"
+            },
+            "plan-staging-mode": {
+                "@xmlns:xsi": "http:\/\/www.w3.org\/2001\/XMLSchema-instance",
+                "@xsi:nil": "true"
+            },
+            "cache-in-app-directory": false
+        },
+        "target": [{"virtual-target": {"name": "VT-demo-1"}}]
+    }
+}
